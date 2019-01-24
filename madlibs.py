@@ -33,12 +33,12 @@ def say_hello():
 def greet_person():
     """Greet user with compliment."""
 
-    player = request.args.get("person")
+    person = request.args.get("person")
 
     compliment = choice(AWESOMENESS)
 
     return render_template("compliment.html",
-                           person=player,
+                           person=person,
                            compliment=compliment)
 
 @app.route("/game")
